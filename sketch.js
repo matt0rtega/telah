@@ -7,7 +7,7 @@ var position, velocity;
 var rand;
 
 function preload() {
-  img = loadImage("telah.jpg");
+  img = loadImage("jeff.png");
   img1 = loadImage("evan@2x.png");
   
 }
@@ -32,6 +32,7 @@ function setup() {
   var l = lerpColor(b1, b2, .33);
   
   position = createVector(width/2, height/2);
+  position2 = createVector(width/2-200, height/2-100);
   
   rand = random(-1, 1);
   
@@ -58,8 +59,10 @@ function draw() {
   imageMode(CENTER);
   scale(s);
   image(img1, position.x + xoff, position.y + yoff);
+  image(img, position2.x + xoff, position2.y + yoff);
   
   position.add(velocity);
+  position2.add(velocity);
   
   pop();
   
