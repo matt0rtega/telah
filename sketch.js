@@ -57,7 +57,7 @@ function draw() {
   
   imageMode(CENTER);
   scale(s);
-  image(img1, position.x + xoff, position.y + yoff, mouseX, mouseY);
+  image(img1, position.x + xoff, position.y + yoff);
   
   position.add(velocity);
   
