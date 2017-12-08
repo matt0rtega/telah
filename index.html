@@ -3,34 +3,153 @@
   <head>
     <meta charset="UTF-8">
     <title>Untitled</title>
+
     <script src="libraries/p5.js" type="text/javascript"></script>
 
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
     <script src="libraries/p5.sound.js" type="text/javascript"></script>
 
-    <script src="sketch.js" type="text/javascript"></script>
-
-    <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;}
+    <style> 
+    
+       body {
+         padding: 0; margin: 0;
+         font-family: 'Helvetica Neue', sans-serif;
+         font-weight: 300 !important;
+       } 
+       
+       canvas {vertical-align: top;}
+       
+       a {
+         text-decoration: none;
+       }
+       
+       a:visited {
+         color: white;
+       }
+       
+       h1, h2 {
+         font-weight: 300;
+         color: white;
+       }
+       
+       p {
+         max-width: 660px;
+         margin: 0 auto;
+       }
+       
+       
+       
        div {
           display: block;
           float: left;
-          background(pink);
+          background: red;
+          width: 100%;
+          clear: both;
+       }
+       
+       section {
+         padding: 44px 0;
+       }
+       
+       .navigation {
+         background: black;
+         text-align: center;
+       }
+       
+       .navigation ul {
+         text-align: center;
+       }
+       
+       .navigation li {
+         color: white;
+         display: inline-block;
+         padding: 0px 5px;
+       }
+       
+       .content {
+         background: black;
+         text-align: center;
+         color: white;
        }
 
        #myContainer {
          height: 100vh;
-         width: 100vh;
+         width: 100%;
          display: block;
+         background: black;
+       }
+       
+       figure {
+         text-align: center;
+         max-width: 720px;
+         margin: 0 auto;
+       }
+       
+       img {
+         max-width: 100%;
+       }
+       
+       footer {
+         width: 100%;
+         height: 100px;
+         display: block;
+         clear: both;
+         background-color: black;
+         color: white;
        }
 
     </style>
   </head>
   <body>
-
+    <div class="navigation">
+      <h1>Telah</h1>
+      <ul>
+        <li><a href="#releases">Releases</a></li>
+        <li><a href="#upcomingshows">Upcoming Show</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="http://www.instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://telah.bandcamp.com/releases" taget="_blank">Bandcamp</a></li>
+      </ul>
+    </div>
+  
     <div id="myContainer">
       <!-- Parent container -->
     </div>
 
-    <div class="content"><h1>More stuff here</h1></div>
+    <div class="content">
+      <section>
+      <h2 id="releases">Releases</h2>
+      <figure>
+        <img src="telahTapes.jpg">
+        <caption>Telah released October 14, 2017
+          Edition of 50 handmade designs. Edition of 50 jewel case tapes.
+        </caption>
+      </figure>
+      
+      </section>
+      
+      <section>
+      <h2>Upcoming shows</h2>
+      <p>Nothing on the schedule</p>
+      </section>
+      
+      <section>
+      <h2 id="about">About</h2>
+      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper.
+      Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper.</p>
+      </section>
+      
+      <section>
+      <h2>Booking & Contact</h2>
+      <p>telah@telah.com</p>
+      </section>
+      
+    </div>
+    
+    <footer></footer>
   </body>
+
+
+    <script src="sketch.js" type="text/javascript"></script>
 </html>

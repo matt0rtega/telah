@@ -1,3 +1,11 @@
+new p5();
+
+var ele = document.getElementById("myContainer");
+var eleStyle = window.getComputedStyle(ele);
+/* Below is the width of ele */
+var eleWidth = eleStyle.getPropertyValue("width");
+var eleHeight = eleStyle.height;
+
 var img, img1;
 var b1, b2, c1, c2;
 var a, b;
@@ -13,7 +21,13 @@ function preload() {
 }
 
 function setup() {
-  //cnv = createCanvas(window.innerWidth, window.innerHeight);
+  
+  eleWidth.replace(/\px/g,"");
+  
+  var ewidth = eleWidth.replace(/px/g, "");
+  var eheight = eleHeight.replace(/px/g, "");
+  
+  cnv = createCanvas(ewidth, eheight);
   cnv.parent("myContainer");
 
   // Define colors
@@ -22,7 +36,7 @@ function setup() {
   c1 = color('#AFC6D1');
   c2 = color(0, 102, 153);
 
-  background(b1);
+  background(0);
 
   //img.resize(img.width/2, img.height/2);
 
