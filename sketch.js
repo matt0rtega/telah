@@ -28,7 +28,7 @@ function setup() {
   var eheight = eleHeight.replace(/px/g, "");
   
   cnv = createCanvas(ewidth, eheight);
-  cnv.parent("myContainer");
+  cnv.parent("#myContainer");
 
   // Define colors
   b1 = color('#F8C9C0');
